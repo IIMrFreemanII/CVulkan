@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": [
+        "swift"
+      ],
+      "args": [],
+      "cwd": "${workspaceFolder:SwiftVulkan}",
+      "name": "Debug SwiftVulkanTests",
+      "program": "${workspaceFolder:SwiftVulkan}/.build/debug/SwiftVulkanTests",
+      "preLaunchTask": "swift: Build Debug SwiftVulkanTests"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": [
+        "swift"
+      ],
+      "args": [],
+      "cwd": "${workspaceFolder:SwiftVulkan}",
+      "name": "Release SwiftVulkanTests",
+      "program": "${workspaceFolder:SwiftVulkan}/.build/release/SwiftVulkanTests",
+      "preLaunchTask": "swift: Build Release SwiftVulkanTests"
+    }
+  ]
+}
