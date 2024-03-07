@@ -8,32 +8,8 @@
       ],
       "args": [],
       "cwd": "${workspaceFolder:SwiftVulkan}",
-      "name": "Debug SwiftVulkanTests",
-      "program": "${workspaceFolder:SwiftVulkan}\\.build\\debug\\SwiftVulkanTests.exe",
-      "preLaunchTask": "swift: Build Debug SwiftVulkanTests"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "sourceLanguages": [
-        "swift"
-      ],
-      "args": [],
-      "cwd": "${workspaceFolder:SwiftVulkan}",
-      "name": "Release SwiftVulkanTests",
-      "program": "${workspaceFolder:SwiftVulkan}\\.build\\release\\SwiftVulkanTests.exe",
-      "preLaunchTask": "swift: Build Release SwiftVulkanTests"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "sourceLanguages": [
-        "swift"
-      ],
-      "args": [],
-      "cwd": "${workspaceFolder:SwiftVulkan}",
       "name": "Debug SwiftVulkanDemo",
-      "program": "${workspaceFolder:SwiftVulkan}\\.build\\debug\\SwiftVulkanDemo.exe",
+      "program": "${workspaceFolder:SwiftVulkan}/.build/debug/SwiftVulkanDemo",
       "preLaunchTask": "swift: Build Debug SwiftVulkanDemo"
     },
     {
@@ -45,7 +21,7 @@
       "args": [],
       "cwd": "${workspaceFolder:SwiftVulkan}",
       "name": "Release SwiftVulkanDemo",
-      "program": "${workspaceFolder:SwiftVulkan}\\.build\\release\\SwiftVulkanDemo.exe",
+      "program": "${workspaceFolder:SwiftVulkan}/.build/release/SwiftVulkanDemo",
       "preLaunchTask": "swift: Build Release SwiftVulkanDemo"
     }
   ]
