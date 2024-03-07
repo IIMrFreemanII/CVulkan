@@ -1,5 +1,4 @@
 module SwiftVulkan {
     header "shim.h"
-    link "vulkan"
     export *
 }
