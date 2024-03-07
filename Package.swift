@@ -11,7 +11,7 @@ let package = Package(
             name: "SwiftVulkan",
             targets: ["SwiftVulkan"]
         ),
-        .executable(name: "SwiftVulkanTests", targets: ["SwiftVulkanTests"])
+        .executable(name: "SwiftVulkanDemo", targets: ["SwiftVulkanDemo"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -24,7 +24,7 @@ let package = Package(
             ]
         ),
         .executableTarget(
-            name: "SwiftVulkanTests",
+            name: "SwiftVulkanDemo",
             dependencies: ["SwiftVulkan"]
         ),
     ]

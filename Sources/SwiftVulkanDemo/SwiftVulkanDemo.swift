@@ -1,7 +1,7 @@
 import SwiftVulkan
 
 @main
-struct SwiftVulkanTests {
+struct SwiftVulkanDemo {
     static func main() {
         var appInfo = VkApplicationInfo()
         appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
