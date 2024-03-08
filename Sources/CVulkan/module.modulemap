@@ -1,5 +1,4 @@
 module CVulkan [system] {
   header "shim.h"
-  link "vulkan"
   export *
 }
