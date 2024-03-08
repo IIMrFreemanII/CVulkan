@@ -1,4 +1,4 @@
-module SwiftVulkan {
+module CVulkan {
     header "shim.h"
     export *
 }

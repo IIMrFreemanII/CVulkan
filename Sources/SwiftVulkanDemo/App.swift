@@ -1,4 +1,4 @@
-import SwiftVulkan
+import CVulkan
 
 @main struct App {
     static func main() {
