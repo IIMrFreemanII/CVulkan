@@ -11,21 +11,20 @@ let package = Package(
             name: "CVulkan",
             targets: ["CVulkan"]
         ),
+        .executable(name: "VulkanDemo", targets: ["VulkanDemo"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "CVulkan",
-            publicHeadersPath: ".",
-            linkerSettings: [
-                .unsafeFlags(["-LSources/CVulkan/1.3.211/lib/win32", "-lvulkan-1"], .when(platforms: [.windows])),
-                .unsafeFlags(["-Xlinker", "-rpath", "-Xlinker", "Sources/CVulkan/1.3.211/lib/macos", "-lvulkan"], .when(platforms: [.macOS]))
-            ]
+        .systemLibrary(
+            name: "CVulkan"
         ),
-        .testTarget(
-            name: "CVulkanTests",
-            dependencies: ["CVulkan"]
+        .executableTarget(
+            name: "VulkanDemo",
+            dependencies: ["CVulkan"],
+            linkerSettings: [
+                .unsafeFlags(["-Xlinker", "-rpath", "-Xlinker", "/usr/local/lib"], .when(platforms: [.macOS]))
+            ]
         )
     ]
 )
