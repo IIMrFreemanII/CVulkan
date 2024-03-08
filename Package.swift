@@ -22,8 +22,12 @@ let package = Package(
         .executableTarget(
             name: "VulkanDemo",
             dependencies: ["CVulkan"],
+            cSettings: [
+                .unsafeFlags(["-I", "C:\\VulkanSDK\\1.3.211.0\\Include"], .when(platforms: [.windows]))
+            ],
             linkerSettings: [
-                .unsafeFlags(["-Xlinker", "-rpath", "-Xlinker", "/usr/local/lib"], .when(platforms: [.macOS]))
+                .unsafeFlags(["-Xlinker", "-rpath", "-Xlinker", "/usr/local/lib"], .when(platforms: [.macOS])),
+                .unsafeFlags(["-L", "C:\\VulkanSDK\\1.3.211.0\\Lib"], .when(platforms: [.windows]))
             ]
         )
     ]
