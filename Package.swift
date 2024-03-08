@@ -11,7 +11,6 @@ let package = Package(
             name: "CVulkan",
             targets: ["CVulkan"]
         ),
-        .executable(name: "SwiftVulkanDemo", targets: ["SwiftVulkanDemo"])
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -24,9 +23,9 @@ let package = Package(
                 .unsafeFlags(["-Xlinker", "-rpath", "-Xlinker", "Sources/CVulkan/1.3.211/lib/macos", "-lvulkan"], .when(platforms: [.macOS]))
             ]
         ),
-        .executableTarget(
-            name: "SwiftVulkanDemo",
+        .testTarget(
+            name: "CVulkanTests",
             dependencies: ["CVulkan"]
-        ),
+        )
     ]
 )

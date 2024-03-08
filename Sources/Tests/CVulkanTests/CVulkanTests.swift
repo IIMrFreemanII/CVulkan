@@ -1,7 +1,13 @@
-import CVulkan
+import XCTest
+@testable import CVulkan
 
-@main struct App {
-    static func main() {
+final class CVulkanTests: XCTestCase {
+    func testExample() throws {
+        // XCTest Documentation
+        // https://developer.apple.com/documentation/xctest
+
+        // Defining Test Cases and Test Methods
+        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
         var appInfo = VkApplicationInfo()
         appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO
         appInfo.pApplicationName = "Hello Vulkan".withCString { $0 }
