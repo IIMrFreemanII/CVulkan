@@ -21,7 +21,7 @@ let package = Package(
             publicHeadersPath: ".",
             linkerSettings: [
                 .unsafeFlags(["-LSources/SwiftVulkan/1.3.211/lib/win32", "-lvulkan-1"], .when(platforms: [.windows])),
-                .unsafeFlags(["-LSources/SwiftVulkan/1.3.211/lib/macos", "-lvulkan"], .when(platforms: [.macOS]))
+                .unsafeFlags(["-Xlinker", "-rpath", "-Xlinker", "Sources/SwiftVulkan/1.3.211/lib/macos", "-lvulkan"], .when(platforms: [.macOS]))
             ]
         ),
         .executableTarget(

@@ -1,10 +1,9 @@
 import SwiftVulkan
 
-@main
-struct App {
+@main struct App {
     static func main() {
         var appInfo = VkApplicationInfo()
-        appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
+        appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO
         appInfo.pApplicationName = "Hello Vulkan".withCString { $0 }
         appInfo.applicationVersion = vkMakeVersion(1, 0, 0)
         appInfo.pEngineName = "No Engine".withCString { $0 }
@@ -12,7 +11,7 @@ struct App {
         appInfo.apiVersion = vkMakeApiVersion(0, 1, 0, 0)
 
         var createInfo = VkInstanceCreateInfo()
-        createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+        createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO
         createInfo.pApplicationInfo = withUnsafePointer(to: &appInfo) { $0 }
 
         var instance: VkInstance?
