@@ -1,4 +1,4 @@
-module CVulkan [system] {
+module CVulkan {
   header "shim.h"
   export *
 }
