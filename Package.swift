@@ -24,7 +24,7 @@ let package = Package(
             name: "VulkanDemo",
             dependencies: ["CVulkan"],
             linkerSettings: [
-                .unsafeFlags(["-L", "C:\\VulkanSDK\\1.3.211.0\\Lib", "-lvulkan-1"], .when(platforms: [.windows])),
+                .unsafeFlags(["-L", "C:\\VulkanSDK\\1.3.275.0\\Lib", "-lvulkan-1"], .when(platforms: [.windows])),
                 .unsafeFlags(["-Xlinker", "-rpath", "-Xlinker", "/usr/local/lib", "-lvulkan"], .when(platforms: [.macOS])),
             ]
         )
